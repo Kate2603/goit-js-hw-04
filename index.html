@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js hw 04</title>
+    <link rel="icon" href="images/4chan-color.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Js hw 04</h1>
+
+    <div>
+      <h2>Задача 1</h2>
+      <h3>Перевірка ємності контейнера</h3>
+      <form id="capacityForm">
+        <p>Приклад вводу:</p>
+        <pre>
+        1. isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8);
+        2. isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12);
+        3. isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14);
+        4. isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7).
+       </pre
+        >
+        <input type="text" id="input" required /><br /><br />
+
+        <button type="submit">Перевірити</button>
+      </form>
+
+      <div class="result" id="result"></div>
+      <script src="./js/task-1.js"></script>
+    </div>
+
+    <div>
+      <h2>Задача 2</h2>
+      <h3>Калькулятор середньої калорійності</h3>
+      <form id="calorieForm">
+        <p>Приклад вводу:</p>
+        <pre>
+          1. [
+               { "day": "monday", "calories": 2040 },
+               { "day": "tuesday", "calories": 2270 },
+               { "day": "wednesday", "calories": 2420 },
+               { "day": "thursday", "calories": 1900 },
+               { "day": "friday", "calories": 2370 },
+               { "day": "saturday", "calories": 2280 },
+               { "day": "sunday", "calories": 2610 }
+             ]
+          2. [
+               { "day": "monday", "calories": 2040 },
+               { "day": "tuesday", "calories": 2270 },
+               { "day": "wednesday", "calories": 2420 },
+               { "day": "thursday", "calories": 1900 },
+               { "day": "friday", "calories": 2370 },
+               { "day": "saturday", "calories": 2280 },
+               { "day": "sunday", "calories": 2610 }
+             ]
+          3. []
+        </pre>
+        <textarea
+          id="inputData"
+          rows="10"
+          cols="50"
+          placeholder="Введіть дані тут..."
+        ></textarea>
+        <br />
+        <button type="button" id="calculate-btn">
+          Обчисліть середню калорійність
+        </button>
+      </form>
+      <div id="result2"></div>
+
+      <script src="./js/task-2.js"></script>
+    </div>
+
+    <div>
+      <h2>Задача 3</h2>
+
+      <div id="capacityForm">
+        <h3>Управління профілем</h3>
+
+        <h4>Приклади вводу команд:</h4>
+        <ul>
+          <li>
+            <code>changeUsername('Marco')</code> - змінює ім'я користувача на
+            Marco
+          </li>
+          <li><code>updatePlayTime(20)</code> - додає 20 годин до часу гри</li>
+        </ul>
+        <input type="text" id="command" />
+        <button id="executeBtn">Виконати</button>
+        <div id="output"></div>
+        <!-- Поле виводу інформації -->
+      </div>
+
+      <script src="./js/task-3.js"></script>
+    </div>
+  </body>
+</html>
