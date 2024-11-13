@@ -36,6 +36,11 @@ function executeCommand() {
       } else {
         throw new Error('Invalid hours');
       }
+    } else if (command === 'getInfo()') {
+      const info = profile.getInfo();
+      outputDiv.innerHTML = `<p>${info}</p>`;
+      console.log(info);
+      return; // Виходимо, щоб не повторювати вивід
     } else {
       throw new Error('Unknown command');
     }
@@ -43,13 +48,6 @@ function executeCommand() {
     // Виводимо оновлену інформацію
     const info = profile.getInfo();
     outputDiv.innerHTML = `<p>${info}</p>`; // Виводимо на сторінку
-
-    // Виводимо в консоль тільки необхідні рядки
-    if (info.includes('Jacob')) {
-      console.log(info); // "Jacob has 300 active hours!"
-    } else if (info.includes('Marco')) {
-      console.log(info); // "Marco has 300 active hours!" або "Marco has 320 active hours!"
-    }
   } catch (error) {
     console.error(error.message);
     outputDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
@@ -60,6 +58,9 @@ function executeCommand() {
 
 // Додаємо обробник подій для кнопки виконання
 executeBtn.addEventListener('click', executeCommand);
+
+// Виводимо початкову інформацію
+outputDiv.innerHTML = `<p>${profile.getInfo()}</p>`;
 
 // Виводимо початкову інформацію
 console.log(profile.getInfo()); // "Jacob has 300 active hours!"
